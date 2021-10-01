@@ -1,4 +1,4 @@
-namespace ReportViwer
+namespace ReportViewer
 {
     public partial class PrintForm : Form
     {
