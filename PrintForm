@@ -1,0 +1,24 @@
+namespace ReportViwer
+{
+    public partial class PrintForm : Form
+    {
+        private List<Supplier> list = new List<Supplier>();
+
+        public PrintForm()
+        {
+            InitializeComponent();
+        }
+        
+        public PrintForm(List<Supplier> suppliersList)
+        {
+            InitializeComponent();
+            this.list = suppliersList;
+        }
+
+        private void PrintForm_Load(object sender, EventArgs e)
+        {
+            SupplierBindingSource.DataSource = list;
+            this.reportViewer1.RefreshReport();
+        }
+    }
+}
